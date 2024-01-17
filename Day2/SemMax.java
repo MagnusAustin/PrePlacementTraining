@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -27,7 +26,13 @@ public class SemMax {
         
         for(int i = 0; i<res.length ; i++){
             System.out.println("Enter Marks of Subject "+(i+1));
-            res[i]=sc.nextInt();
+            int temp = sc.nextInt();
+            if(temp>100){
+                System.out.println("Invalid Output");
+                i--;
+                continue;
+            }
+            res[i]=temp;
         }
         System.out.println();
         int max=0;
